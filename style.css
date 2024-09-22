@@ -1,0 +1,431 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana;
+}
+html,
+body{
+    height: 100%;
+    width: 100%;
+}
+.container{
+    background-color: #393e46;
+    padding-top: 20px;
+
+}
+/* header */
+.top_frame{
+    width: 96.7%;
+    height: 40vh;
+    background-color: #f8b500;
+    margin-left: 50px;
+    border-radius: 140px 0px 0px 140px;
+    padding: 19px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.profile{
+    width:35vh;
+    height: 35vh;
+    border-radius: 50%;
+    overflow:hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.profileImg{
+    width:35vh;
+    height: 35vh;
+    transition: all 1.1s;
+    
+}
+/* for zoom-in effect */
+.profileImg:hover{
+    transform: scale(1.2);
+}
+.name{
+    margin-right: 350px;
+}
+.name h1{
+    color: #f7f7f7;
+    font-size: 5rem;
+}
+.name h4{
+    color: #393e46;
+    font-family: Verdana;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.body_container{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.left{
+    position: relative;
+    width:70vh;
+    padding: 40px 20px 40px 50px
+}
+.about h2{
+    color: #f8b500;
+    font-family: Verdana;
+    margin-bottom: 20px;
+}
+.about p{
+    color: #f7f7f7;
+    font-family: Arial;
+    font-size-adjust: 0.55;
+}
+.contact{
+    margin-top: 30px;
+}
+.contact h2{
+    color: #f8b500;
+    font-family: Verdana;
+    margin-bottom: 20px;
+}
+.contactData{
+    display:flex;
+    align-items: center;
+    gap:30px;
+    margin: 10px 0px 10px 0px;
+    color: #f7f7f7;
+    font-size-adjust: 0.55;
+}
+.contactData .icon_con{
+    width:25px;
+    height:25px;
+}
+.contactData a:link{
+    cursor: pointer;
+    text-decoration: none;
+    color: #f7f7f7;
+}
+.location a{
+    text-decoration: none;
+    color: #f7f7f7;
+}
+.language{
+    margin-top: 30px;
+}
+.language h2{
+    color: #f8b500;
+    margin-bottom: 20px;
+}
+.progress{
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.progress_item{
+    padding: 0.3rem 0;
+}
+.progress_title{
+    color: #f7f7f7;
+    font-size-adjust: 0.45;
+}
+.progress_bar{
+    position: relative;
+    width: 27rem;
+    height: 8px;
+    border-radius: 2rem;
+    background-color: #f7f7f7;
+}
+@media (max-width: 768px) {
+    .progress_bar{
+        width: 25rem;
+    }
+    
+}
+@media (max-width: 440px) {
+    .progress_bar{
+        width: 300px;
+    }
+}
+@media (max-width: 340px) {
+    .progress_bar{
+        width: 280px;
+    }
+}
+.bar{
+    border-radius: inherit;
+    background: linear-gradient(90deg,#805e00, #bb8900, #f8b500 );
+    position: absolute;
+    transition: width 1.5s cubic-bezier(0.1, 0.42, 0.85, 1);
+    width:0;
+    height: 100%;
+    left:0;
+}
+.bar::after{
+    content: attr(data-text);
+    position:absolute;
+    right: 0;
+    top: -2rem;
+    width: 2.5rem;
+    height: 1.5rem;
+    background-color: #c99300;
+    font-size: 12px;
+    line-height: 1.5rem;
+    color: #393e46;
+    text-align: center;
+    border-radius: 0.1rem;
+    animation: text 0.6s ease-in-out;
+    font-weight: bold;
+}
+.bar::before{
+    content: " ";
+    position: absolute;
+    right: 0.2rem;
+    top: -0.7rem;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid #c99300;
+    animation: text 0.6s ease-in-out;
+}
+@keyframes text{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.follow{
+    margin-top: 16px;
+}
+.follow h2{
+    color: #f8b500;
+    margin-bottom: 20px;
+}
+.follow a img{
+    margin: 0px 10px 0px 0px;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+.follow a img:hover{
+    opacity: 100;
+    transform: scale(1.2);
+}
+/* Right part start */
+.right{
+    background-color: #a7a5a5;
+    display: flex;
+    flex-direction: column;
+    width:1000px;
+}
+.top-container{
+    display: flex;
+    justify-content: space-between;
+    margin:30px;
+}
+.exp_edu{
+    background-color: #3e45523f;
+    /* margin-top: 30px;
+    margin-left:30px; */
+    padding:10px;
+    width:455px;
+    border-radius: 10px;
+    /* box-shadow: 5px 8px 10px #2925252f; */
+}
+.experience h2{
+    color: #f8b500;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px #3e45523f;
+}
+.experience .exp_details h3{
+    color: #393e46;
+    font-size: 1.2rem;
+}
+.experience .exp_details .company_details{
+    margin:5px 0px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+.experience .exp_details .company_details p{
+    color: black;
+    font-size: 0.8rem;
+}
+.exp_data p{
+    font-weight: lighter;
+    font-size: 0.8rem;
+    margin: 10px 0px;
+}
+.view-more {
+    color: blue;
+    cursor: pointer;
+    display: flex;
+    justify-content: end;
+    font-size: 0.8rem;
+    margin-bottom: 42px;
+  }
+/* popup start */
+#popup {
+    position: fixed;
+    top:0px;
+    left:0px;
+    width:100vw;
+    height:100vh;
+    background: rgba(0, 0, 0, 0.75);
+    display:none;
+}
+/* Popup content box */
+#popup .popup-content{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width:400px;
+    padding: 10px 20px;
+    background: #bfbfc0;
+}
+/* Close button styling */
+#popup a.close-popup {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    font-weight:600;
+    text-decoration: none;
+    cursor: pointer;
+}
+#popup:target{
+    display: block;
+}
+/* Header styling */
+.Popup-exp h2{
+    color: black;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    padding-top: 10px;
+}
+/* Company details styling */
+.Popup-exp .popup_exp_details h3{
+    color: #393e46;
+    font-size: 1.2rem;
+}
+.Popup-exp .popup_exp_details .company_details {
+    display:flex;
+    justify-content: space-between;
+    font-weight: lighter;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin: 10px 0px;
+}
+/* Paragraph inside popup-details */
+.popup-details p {
+    font-weight: lighter;
+    font-size: 0.8rem;
+    margin: 20px 0px;
+    text-align: justify;
+}
+
+#popup1 {
+    position: fixed;
+    top:0px;
+    left:0px;
+    width:100vw;
+    height:100vh;
+    background: rgba(0, 0, 0, 0.75);
+    display:none;
+}
+#popup1:target{
+    display: block;
+}
+
+#popup1 .popup-content{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width:400px;
+    padding: 10px 20px;
+    background: #bfbfc0;
+}
+#popup1 .Popup-exp h2{
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    padding-top: 10px;
+}
+/* Close button styling */
+#popup1 a.close-popup1 {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    font-weight:600;
+    text-decoration: none;
+    cursor: pointer;
+}
+.read-more {
+    color: blue;
+    cursor: pointer;
+    display: flex;
+    justify-content: end;
+    font-size: 0.8rem;
+}
+/* Education styling */
+.education{
+    background-color: #3e45523f;
+    padding:10px;
+    width:455px;
+    border-radius: 10px;
+}
+.edu_head{
+    color: #f8b500;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px #3e45523f;
+    font-size: 0.75rem;
+}
+.timeline-area{
+    margin-left: 20px;
+    border-left: 2px solid #575353;
+    padding: 0 20px 0 20px;
+}
+.edu-details{
+    padding:10px 25px;
+    font-size: 16px;
+    line-height: 1.1;
+    position: relative;
+    height: 110px;
+    margin-bottom: 20px;
+}
+.edu-details::before{
+    content: '';
+    display: block;
+    width:10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #f8b500;
+    border: 3px solid #ddd;
+    position: absolute;
+    top: 16px;
+    left: -28px;
+}
+.edu-details::after{
+    content: '';
+    width: 0;
+    height: 0;   
+}
+.edu-details h2{
+    color: #393e46;
+    font-size: 1.1rem;
+}
+.edu-details h3{
+    font-weight: lighter;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+.edu-details h4{
+    font-weight: lighter;
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
