@@ -11,7 +11,7 @@ body{
 }
 .container{
     background-color: #393e46;
-    padding-top: 20px;
+    padding-top: 30px;
 
 }
 /* header */
@@ -106,7 +106,7 @@ body{
     color: #f7f7f7;
 }
 .language{
-    margin-top: 30px;
+    margin-top: 40px;
 }
 .language h2{
     color: #f8b500;
@@ -127,7 +127,7 @@ body{
 }
 .progress_bar{
     position: relative;
-    width: 27rem;
+    width: 95%;
     height: 8px;
     border-radius: 2rem;
     background-color: #f7f7f7;
@@ -196,7 +196,7 @@ body{
     }
 }
 .follow{
-    margin-top: 16px;
+    margin-top: 30px;
 }
 .follow h2{
     color: #f8b500;
@@ -768,5 +768,183 @@ svg{
     .follow_icon-mob a img:hover{
         opacity: 100;
         transform: scale(1.2);
+    }
+  }
+  /* Tablet View - 768px to 1023px */
+@media screen and (min-width: 768px) and (max-width: 1450px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .top_frame {
+      height: 200px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      padding-bottom: 20px;
+      width: 96%
+    }
+  
+    .profile {
+      width: 170px;
+      height: 170px;
+    }
+  
+    .profileImg {
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+    }
+    .name{
+        position: absolute;
+        left:50%;
+        width:250px;
+    }
+    .name h1 {
+      font-size: 2.2rem;
+    }
+  
+    .name h4 {
+      font-size: 1.2rem;
+    }
+  
+    .body_container {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .left, .right {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .language .progress_container {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .contactData {
+      margin: 10px 0;
+    }
+  
+    .contactData a {
+      font-size: 1rem;
+    }
+    .container_combo{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+    .container_combo .contact{
+        /* margin-right: 10%; */
+        margin-left: 10%;
+    }
+    .container_combo .contact h2{
+        margin-right: 100px;
+        width: 170px; 
+    }
+    .contactGroup .contactData{
+        margin-top: 20px;
+    }
+    .language{
+        width:60%
+    }
+    .progress_bar{
+        width: 100%
+    }
+    .follow{
+        display:none;
+    }
+    .exp{
+        width:48%
+    }
+    .exp_edu{
+        width:100%
+    }
+    .experience{
+        width:98%;
+        padding: 0 20px;
+    }
+    .education{
+        width:48%
+    }
+    .skill{
+        height:250px;
+    }
+    .contact-mob {
+      display: none;
+    }
+    .follow-mob {
+        margin-top: 20px;
+        padding:20px 0;
+        display: block;
+        background-color: #393e46;
+    }
+    .follow-mob h2{
+        color: #f8b500 ;
+        margin-bottom: 20px;
+    }
+    .follow-mob .follow_icon-mob a{
+        margin-right: 20px;
+    }
+    .follow_icon-mob a img{
+        opacity: 0.5;
+        transition: 0.5s;
+    }
+    .follow_icon-mob a img:hover{
+        opacity: 100;
+        transform: scale(1.2);
+    }
+  }
+  @media screen and (min-width: 1080px) and (max-width: 1920px) {
+    .top_frame{
+        margin-left: 5%;
+        height: 400px;
+        border-radius: 190PX 0px 0px 190PX;
+        width: 95%;
+    } 
+    .profile{
+        width: 350px;
+        height: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .profile img{
+        width: 350px;
+        height: 350px;
+    }
+    .name{
+        margin-right: 30%;
+    }
+    .body_container{
+        width: 100%;
+    }
+    .left{
+        width: 30%;
+    }
+    .right{
+        width: 70%;
+    }
+    .exp{
+        width:48.5%;
+        height:100%;
+    }
+    .exp_edu{
+        width:100%;
+        height:100%;
+    }
+    .education{
+        width: 48.5%;
+        height:100%;
     }
   }
